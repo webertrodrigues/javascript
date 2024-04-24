@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula Troco</title>
+    <style>
+        button{
+            width: auto;
+            height: 60px;
+            font-size: 1.2em;
+            padding: 15px;
+            box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.288);
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculando o Troco</h1>
+    <button onclick="clicou()">Comprar produto</button>
+    <script>
+        function clicou(){
+            var produto = window.prompt('Que produto você está comprando?') //Nome do produto
+            var custo = Number(window.prompt(`Quanto custa ${produto} que você está querendo comprar?`)) //Valor do produto
+            var pago = Number(window.prompt(`Qual valor que você deu para pagar ${produto}?`)) //Quanto foi pago
+            var troco = pago - custo //troco
+            window.alert(`Você comprou ${produto} que custou ${custo.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}. \nDeu ${pago.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} em dinheiro e vai receber ${troco.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} de troco. \nVolte Sempre!`) //Mostra quanto foi o produto, quanto ele custou, quanto foi pago e quanto vai ter de troco, com o sifão do Real.
+        }
+    </script>
+</body>
+</html>

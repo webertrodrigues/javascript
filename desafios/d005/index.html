@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de medidas</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        p{
+            font-size: 1.3em;
+        }
+        button{
+            width: auto;
+            height: 60px;
+            font-size: 1.2em;
+            padding: 15px;
+            box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.288);
+            font-weight: ;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor de Medidas</h1>
+    <button onclick="converter()">Converter</button>
+    <p>Clique no botão acima para iniciar.</p>
+    <h1 id="titulo"></h1>
+    <p id="Km"></p>
+    <p id="Hm"></p>
+    <p id="Dam"></p>
+    <p id="dm"></p>
+    <p id="cm"></p>
+    <p id="mm"></p>
+    <script>
+        function converter(){
+            var dist = Number(window.prompt('Digite uma distância em metros (m)'))
+            var p1 = window.document.getElementsByTagName('p')[0]
+            p1.innerHTML = '<p></p>' // retirar o paragrafo "Clique no botão acima para iniciar."
+            /*criar um título*/
+            var titulo = window.document.querySelector('#titulo') //selecionando um título vazio
+            titulo.innerHTML = `A distância de ${dist} metros, corresponde a...` //Texto do título
+            /*Conversão para Km*/
+            var Km = window.document.querySelector('#Km')
+            resultado_Km = dist/1000 //calculo de conversão
+            Km.innerHTML = `${resultado_Km.toLocaleString('pt-BR')} quilômetros (Km)`
+            /*Conversão para Hm*/
+            var Hm = window.document.querySelector('#Hm')
+            resultado_Hm = dist/100 //calculo de conversão
+            Hm.innerHTML = `${resultado_Hm.toLocaleString('pt-BR')} hectômetros (Hm)`
+            /*Conversão para Dam*/
+            var Dam = window.document.querySelector('#Dam')
+            resultado_Dam = dist/10 //calculo de conversão
+            Dam.innerHTML = `${resultado_Dam.toLocaleString('pt-BR')} decâmetros (Dam)`
+            /*Conversão para dm*/
+            var Dam = window.document.querySelector('#dm')
+            resultado_dm = dist*10 //calculo de conversão
+            dm.innerHTML = `${resultado_dm.toLocaleString('pt-BR')} decímetros (dm)`
+            /*Conversão para cm*/
+            var cm = window.document.querySelector('#cm')
+            resultado_cm = dist*100 //calculo de conversão
+            cm.innerHTML = `${resultado_cm.toLocaleString('pt-BR')} centímetros (cm)`
+            /*Conversão para mm*/
+            var mm = window.document.querySelector('#mm')
+            resultado_mm = dist*1000 //calculo de conversão
+            mm.innerHTML = `${resultado_mm.toLocaleString('pt-BR')} milímetros (mm)`
+        }
+    </script>
+</body>
+</html>
