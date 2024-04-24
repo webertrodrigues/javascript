@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Fórmula de Bhaskara</title>
+</head>
+<body>
+    <h1>Resolvendo Bhaskara</h1>
+    <button onclick="calcular()">Calcular</button>
+    <p>Considerando uma equação no formato <strong>a</strong>x<sup>2</sup> + <strong>b</strong>x + <strong>c</strong> = 0, aperte o botão acima para calcular o valor de &Delta;</p>
+    <h1 id="titulo"></h1>
+    <p id="equação"></p>
+    <p id="delta_equação"></p>
+    <p id="delta_resultado"></p>
+
+    <script>
+        function calcular(){
+            var a = window.prompt('Qual é o valor de a?')
+            var b = window.prompt('Qual é o valor de b?')
+            var c = window.prompt('Qual é o valor de c?')
+            var delta = b**2 - 4 * a * c
+            /*Paragrafo desaparecer*/
+            var p1 = window.document.getElementsByTagName('p')[0]
+            p1.innerHTML = '<p></p>'
+            /*mostrar equação com os valores estabelecidos*/
+            var equação = window.document.querySelector('#equação')
+            equação.innerHTML = `A equação atual é <strong>${a}x<sup>2</sup> + ${b}x + ${c} = 0</strong>`
+            /*mostrar fórmula de delta*/
+            var delta_equação = window.document.querySelector('#delta_equação')
+            delta_equação.innerHTML = `O cálculo realizado será <strong>&Delta; = ${b}<sup>2</sup> - 4 . ${a} . ${c}</strong>`
+            /*mostrar valor de delta*/
+            var delta_resultado = window.document.querySelector('#delta_resultado')
+            delta_resultado.innerHTML = `O valor calculado foi <mark><strong>&Delta; = ${delta}</strong></mark>`
+        }
+    </script>
+</body>
+</html>
