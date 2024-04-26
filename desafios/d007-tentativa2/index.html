@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Conversor R$ -> US$></title>
+</head>
+<body>
+    <h1>Conversor R$ &rarr; US$</h1>
+    <button onclick="converter()">Converter</button>
+    <p>Clique no botão acima para iniciar.</p>
+    <script>
+        var valor_US = Number(window.prompt('Antes de mais nada. Quanto está a contação do dólar agora?'))
+        function converter(){
+            var valor_R$ = Number(window.prompt('Quantos R$ você tem na carteira?'))
+            var conversão = valor_R$ * valor_US
+            window.alert(`Seus dinheiro em Real (${valor_R$.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}), vai virar ${conversão.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'})} dólares`)
+        }
+    </script>
+</body>
+</html>
