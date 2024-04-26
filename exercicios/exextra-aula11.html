@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identificação</title>
+    <style>
+        .esp{
+            margin-bottom: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Identificação</h1>
+    <p class="esp">Qual é seu país de origem?</p>
+    <input type="text" id="pais">
+    <input type="button" value="Identificar" onclick="identificar()" id="identificar">
+    <p>Resultado:</p>
+    <div id="res">
+    </div>
+    <script>
+        function identificar(){
+            var pais = window.document.getElementById('pais').value
+            var res = window.document.getElementById('res')
+            res.innerHTML = `A seu pais de origem e <strong>${pais}</strong>`
+            if (pais == `Brasil`){
+                res.innerHTML += `<p>Você é  <strong>Brasileiro</strong></p>`
+            }else{
+                if (pais == `USA`){
+                    res.innerHTML += `<p>Você é  <strong>Estadunidense</strong></p>`
+                }
+                else{
+                    res.innerHTML += `<p>Você é  <strong>Estrangeiro</strong></p>`
+                }
+            }
+        }
+    </script>
+</body>
+</html>
