@@ -5,7 +5,7 @@ function iniciar(){
     var resultado = window.document.querySelector('#resultado') //selecionar local onde o resultado será colocado 
     var img = window.document.createElement('img') //criação de uma tag/elemento img
     img.setAttribute('id', 'foto') //Atribuindo um id = foto na tag/elemento img
-    if (ano.length == 0 || ano >= ano_atual){ //criando mensagem de erro caso o ano digitado seja maior que o atual e caso seja 0
+    if (ano.length == 0 || ano >= ano_atual){ //criando mensagem de erro caso o ano digitado seja maior que o atual ou caso seja 0
      window.alert('Verifique os dados e tente novamente.')   
     } else {
         var sexo = window.document.getElementsByName('radsex') //selecionando a radio input
