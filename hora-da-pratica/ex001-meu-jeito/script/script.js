@@ -1,10 +1,12 @@
 function carregou(){
-    var agora = new Date()
-    var hora = agora.getHours()
+    var agorahr = new Date()
+    var hora = agorahr.getHours()
+    var agoramin = new Date()
+    var min = agoramin.getMinutes()
     var txt = window.document.querySelector('#agora')
     var img = window.document.querySelector('#img')
-    txt.innerHTML = `<p>Agora são ${hora} horas.</p>`
-    if (hora <= 12){
+    txt.innerHTML = `<p>Agora são ${hora}:${min}</p>`
+    if (hora <= 12 && min <= 30){
         img.innerHTML = `<img src="imagens/amanhecer-250.png" alt="">`
         window.document.body.style.background = '#FECA78'
     } else if(hora < 18){
