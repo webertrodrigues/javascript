@@ -9,9 +9,9 @@
 <body>
     <h1>Calcular Desconto</h1>
     <button onclick="iniciar()">Desconto de 10%</button>
-    <p>Clique no botão acima para iniciar</p>
-    <div id="res">
 
+    <div id="res">
+        <p>Clique no botão acima para iniciar</p>
     </div>
     <script>
         function iniciar(){
@@ -19,8 +19,6 @@
             var preço = Number(window.prompt(`Qual é o preço de ${produto}`))
             var desconto = preço * 0.1 //calculo de desconto
             var preço_final = preço - desconto //aplicação de desconto
-            var p1 = window.document.getElementsByTagName('p')[0] //retira parágrafo
-            p1.innerText = ''
             var res = window.document.querySelector('#res')
             res.innerHTML = `<h2>Calculando desconto de 10% para ${produto}</h2>` //colocando título
             /*valor*/

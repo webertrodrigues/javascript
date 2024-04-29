@@ -9,14 +9,12 @@
 <body>
     <h1>Conversor de Medidas</h1>
     <button onclick="converter()">Converter</button>
-    <p>Clique no botão acima para iniciar.</p>
     <div id="res">
+        <p>Clique no botão acima para iniciar.</p>
     </div>
     <script>
         function converter(){
             var dist = Number(window.prompt('Digite uma distância em metros (m)'))
-            var p1 = window.document.getElementsByTagName('p')[0]
-            p1.innerText = '' // retirar o paragrafo "Clique no botão acima para iniciar."
             /*criar um título*/
             res.innerHTML = `<h2>A distância de ${dist} metros, corresponde a...</h2>` //Texto do título
             /*Conversão para Km*/ 

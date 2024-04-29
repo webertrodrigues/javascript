@@ -9,8 +9,8 @@
 <body>
     <h1>Reajuste salarial</h1>
     <button onclick="iniciar()">Reajustar salário</button>
-    <p>Clique no botão acima para iniciar.</p>
     <div id="res">
+        <p>Clique no botão acima para iniciar.</p>
     </div>
     <script>
         function iniciar(){
@@ -19,8 +19,6 @@
             var porcentagem = Number(window.prompt(`O salário de ${nome} vai ser reajustado em qual porcentagem?`))
             var reajuste = salário * (porcentagem/100) //valor reajuste
             var salário_new = salário + reajuste //valor de reajuste mais o salario antigo
-            var p1 = window.document.getElementsByTagName('p')[0] //paragrafo desaparecer
-            p1.innerText = ''
             res.innerHTML = `<h2>${nome} recebeu um aumento salarial!</h2>`
             /*mostrando quando era o salário inicial*/
             res.innerHTML += `<p>O salário atual era ${salário.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}.</p>`

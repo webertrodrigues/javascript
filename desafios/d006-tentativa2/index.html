@@ -9,14 +9,13 @@
 <body>
     <h1>Conversor de Temperaturas</h1>
     <button onclick="converter()">Converter</button>
-    <p>Clique no botão acima para iniciar.</p>
+    
     <div id="res">
+        <p>Clique no botão acima para iniciar.</p>
     </div>
     <script>
         function converter(){
             var temp = Number(window.prompt('Digite uma temperatura em °C (Celsius)'))
-            var p1 = window.document.getElementsByTagName('p')[0]
-            p1.innerText = '' // retirar o paragrafo "Clique no botão acima para iniciar."
             /*criar um título*/
             res.innerHTML = `<p>A temperatura de ${temp}°C, corresponde a...</p>` //Texto do título
             /*Conversão para Kelvin*/
