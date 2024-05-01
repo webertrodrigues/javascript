@@ -35,11 +35,9 @@ footer{
 }
 select{
     width: 150px;
-    margin-top: 10px;
+    height: 100px;
+    margin: 5px 0px;
 }
 button{
     display: block;
-}
-#res{
-    padding-top: 10px;
 }
