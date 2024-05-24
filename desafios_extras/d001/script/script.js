@@ -5,22 +5,22 @@ let nacionalidade = 'Russo'
 let idade = 44
 let peso = 106
 let altura = 1.83
-inf.innerHTML = `Lutador: ${nome} <br>`
-inf.innerHTML += `Nacionalidade: ${nacionalidade} <br>`
-inf.innerHTML += `Idade: ` + idade + ` anos <br>`
-inf.innerHTML += `Peso: ` + peso + ` Kg <br>`
-inf.innerHTML += `Altura: ` + altura + ` m`
+inf.innerHTML += `<p>${nome}</p>`
+inf.innerHTML += `<p>${nacionalidade}</p>`
+inf.innerHTML += `<p>${idade} anos</p>`
+inf.innerHTML += `<p>${peso} Kg</p>`
+inf.innerHTML += `<p>${altura} m</p>`
 
 /*Frase do Dia*/
 let frase = window.document.querySelector('#frase')
 const dia = 10
 const mes = 9
 const ano = 2021
-const frase_do_dia = 'Seja curioso. Leia de tudo. Tente coisas novas. O que as pessoas chamam de inteligéncia se resume a curiosidade.'
+const frase_do_dia = '"Seja curioso. Leia de tudo. Tente coisas novas. O que as pessoas chamam de inteligencia se resume a curiosidade."'
 const autoria = 'Aaron Swartz'
-frase.innerHTML = dia + '/' + mes + '/' + ano + '<br>'
-frase.innerHTML += frase_do_dia + '<br>'
-frase.innerHTML += autoria
+frase.innerHTML += `<p id="dia">${dia}/${mes}/${ano}</p>`
+frase.innerHTML += `<p id="frasedia">${frase_do_dia}</p>`
+frase.innerHTML += `<p id="autor">${autoria}</p>`
 
 /*Array de Meses do Ano*/
 let x = window.document.querySelector('#meses')
