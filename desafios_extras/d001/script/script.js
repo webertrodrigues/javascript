@@ -25,7 +25,7 @@ frase.innerHTML += `<p id="autor">${autoria}</p>`
 /*Array de Meses do Ano*/
 let x = window.document.querySelector('#meses')
 let meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'junho', 'julho', 'agosto', 'setembro']
-x.innerHTML = meses[0] + ', ' + meses[1] + ', ' + meses[3] + ', ' + meses[4] + ', ' + meses[5] + ', ' + meses[6] + ', ' + meses[7] + ', ' + meses[8] + ', ...'
+x.innerHTML += `<p>${meses[0]}, ${meses[1]}, ${meses[2]}, ${meses[3]}, ${meses[4]}, ${meses[5]}, ${meses[6]}, ${meses[7]}, ${meses[8]}, ... </p>`
 
 /*Objeto Jogo*/
 let jogo = window.document.querySelector('#jogo')
@@ -34,6 +34,6 @@ let informacoes = {
     desenvolvedor: ['Activision'],
     ano: [2003]
 }
-jogo.innerHTML = `Nome: ${informacoes.nome} <br>`
-jogo.innerHTML += `Desenvolvido por: ${informacoes.desenvolvedor} <br>`
-jogo.innerHTML += `Ano do Lançamento: ${informacoes.ano}`
+jogo.innerHTML += `<p>Nome:</p> <p class="x">${informacoes.nome}</p>`
+jogo.innerHTML += `<p>Desenvolvedor:</p> <p class="x">${informacoes.desenvolvedor}</p>`
+jogo.innerHTML += `<p>Ano do Lançamento:</p> <p class="x">${informacoes.ano}</p>`

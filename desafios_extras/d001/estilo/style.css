@@ -5,8 +5,11 @@
     --font-frasedia: "Special Elite", system-ui;
 }
 
-#inf{
+body{
     font-family: Arial, Helvetica, sans-serif;
+}
+
+#inf{
     background-color: rgb(54, 54, 54);
     border: 5px solid rgb(77, 77, 77);
     border-radius: 8px;
@@ -48,3 +51,36 @@
 #autor{
     text-align: right;
 }
+
+#meses{
+    background-color: lightgray;
+    width: 400px;
+    padding: 15px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.411);
+}
+#meses h1, p{
+    margin: 7px;
+}
+
+#jogo{
+    background-image: url('../imagens/fundo-jogo.jpg');
+    background-repeat: no-repeat;
+    width: 400px;
+    background-size: cover;
+    color: white;
+    padding: 15px;
+    border-radius: 15px;
+}
+#jogo h1{
+    margin: 0px;
+    margin-bottom: 20px;
+    
+}
+.x{
+   background-color: white;
+   color: black; 
+   padding: 10px;
+   border-radius: 10px;
+   border: 1px solid rgba(0, 0, 0, 0.692);
+}
+
